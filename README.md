@@ -1,5 +1,5 @@
 # Jamboree-App
-A Streamlit app to access a student's probability of admission to Ivy League colleges
+Streamlit app and Flask app to access a student's probability of admission to Ivy League colleges
 
 ### Installation
 Create a virtual environment and within the environment run the below command in the terminal \
