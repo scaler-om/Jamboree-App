@@ -5,6 +5,10 @@ A Streamlit app to access a student's probability of admission to Ivy League col
 Create a virtual environment and within the environment run the below command in the terminal \
 ```pip install -r requirements.txt ```
 
-### Running the app
+### Running the streamlit app
 Run the below command in the terminal \
-```streamlit run .\app.py```
+```streamlit run .\streamlit_app.py```
+
+### Running the flask app
+Run the below command in the terminal \
+```flask --app .\flask_app.py run```

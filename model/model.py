@@ -22,7 +22,7 @@ df['Research'] = df['Research'].astype('bool')
 df['Chance of Admit'] = df['Chance of Admit'].astype('float32')
 
 # prepare data for modeling
-df['Research'] = df['Research'].astype('int8')
+#df['Research'] = df['Research'].astype('int8')
 
 # train-test split
 X = df.drop(columns='Chance of Admit')
@@ -67,3 +67,16 @@ scaler_pkl_file = 'scaler.pkl'
 pickle.dump(min_max_scaler, open(scaler_pkl_file, 'wb'))
 model_pkl_file = 'model.pkl'
 pickle.dump(regr_lr, open(model_pkl_file, 'wb'))
+
+# loading and testing the saved model
+scaler = pickle.load(open("./scaler.pkl", 'rb'))
+model = pickle.load(open("./model.pkl", 'rb'))
+
+def admission_prediction(data):
+    data = scaler.transform(data)
+    prediction = model.predict(data)
+    return round(prediction[0][0], 2)
+
+test_data = [[320, 120, 5, 5, 5, 10, 1]]
+#test_data = [[0, 0, 0, 0, 0, 0, 0]]
+print(f"Admission prediction probability for test data: {admission_prediction(test_data)}")

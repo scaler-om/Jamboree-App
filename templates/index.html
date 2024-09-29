@@ -1,0 +1,59 @@
+<center>
+    <h1>Admission Probability Prediction App</h1>
+</center>
+<center>
+    <form action="/predict" method="POST">
+        <div>
+            <div>
+                <label><b>GRE Score[0 to 340]</b></label>
+                <br>
+                <input type="text" name="GRE Score" value="300.8">
+            </div>
+            <br>
+            <div>
+                <label><b>TOEFL Score[0 to 120]</b></label>
+                <br>
+                <input type="text" name="TOEFL Score" value="115.5">
+            </div>
+            <br>
+            <div>
+                <label><b>University Rating[0, 1, 2, 3, 4, 5]</b></label>
+                <br>
+                <input type="text" name="University Rating" value="4">
+            </div>
+            <br>
+            <div>
+                <label><b>SOP[0, 1, 2, 3, 4, 5]</b></label>
+                <br>
+                <input type="text" name="SOP" value="4">
+            </div>
+            <br>
+            <div>
+                <label><b>LOR[0, 1, 2, 3, 4, 5]</b></label>
+                <br>
+                <input type="text" name="LOR" value="4">
+            </div>
+            <br>
+            <div>
+                <label><b>CGPA[0 to 10]</b></label>
+                <br>
+                <input type="text" name="CGPA" value="8.5">
+            </div>
+            <br>
+            <div>
+                <label><b>Research[0, 1]</b></label>
+                <br>
+                <input type="text" name="Research" value="1">
+            </div>
+        </div>
+        <br>
+        <div>
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+
+</center>
+
+<div>
+    <br><h4 align="center"><b>{{pred}}</b></h4>
+</div>
