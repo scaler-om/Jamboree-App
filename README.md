@@ -12,3 +12,11 @@ Run the below command in the terminal \
 ### Running the flask app
 Run the below command in the terminal \
 ```flask --app .\flask_app.py run```
+
+### Building the docker
+Run the below command in the terminal \
+```docker build -t admission_probability_app .``` 
+
+### Running the docker
+Run the below command in the terminal \
+```docker run -p 8000:5000 -d admission_probability_app``` 
